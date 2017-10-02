@@ -1,0 +1,24 @@
+{
+  "name": "three-shader-terrain",
+  "version": "1.0.0",
+  "description": "Dynamic terrain shader from Three.js library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivee-tech/three-shader-terrain.git"
+  },
+  "keywords": [
+    "THREE",
+    "Shader",
+    "Terrain"
+  ],
+  "author": "ivee-tech",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivee-tech/three-shader-terrain/issues"
+  },
+  "homepage": "https://github.com/ivee-tech/three-shader-terrain#readme"
+}
