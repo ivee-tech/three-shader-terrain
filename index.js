@@ -241,7 +241,7 @@ function ShaderTerrain() {
 
 				gl_FragColor = vec4( outgoingLight, diffuseColor.a );	// TODO, this should be pre-multiplied to allow for bright highlights on very transparent objects
 
-				THREE.ShaderChunk[ fog_fragment ],
+				${THREE.ShaderChunk['fog_fragment']}
 
 			}
 
@@ -314,7 +314,7 @@ function ShaderTerrain() {
 				vec3 normalTex = texture2D( tNormal, uvBase ).xyz * 2.0 - 1.0;
 				vNormal = normalMatrix * normalTex;
 
-				THREE.ShaderChunk[ shadowmap_vertex ],
+				${THREE.ShaderChunk['shadowmap_vertex']}
 
 			}
 
