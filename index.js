@@ -6,6 +6,8 @@
 var THREE = require('three');
 
 function ShaderTerrain() {
+	
+	var ShaderChunk = THREE.ShaderChunk;
 
 	return {
 	/* -------------------------------------------------------------------------
@@ -88,11 +90,11 @@ function ShaderTerrain() {
 
 			varying vec3 vViewPosition;
 
-			${THREE.ShaderChunk[ 'common' ]}
-			${THREE.ShaderChunk[ 'bsdfs' ]}
-			${THREE.ShaderChunk[ 'lights_pars' ]}
-			${THREE.ShaderChunk[ 'shadowmap_pars_fragment' ]}
-			${THREE.ShaderChunk[ 'fog_pars_fragment' ]}
+			${ShaderChunk[ 'common' ]}
+			${ShaderChunk[ 'bsdfs' ]}
+			${ShaderChunk[ 'lights_pars' ]}
+			${ShaderChunk[ 'shadowmap_pars_fragment' ]}
+			${ShaderChunk[ 'fog_pars_fragment' ]}
 
 			float calcLightAttenuation( float lightDistance, float cutoffDistance, float decayExponent ) {
  				if ( decayExponent > 0.0 ) {
@@ -241,7 +243,7 @@ function ShaderTerrain() {
 
 				gl_FragColor = vec4( outgoingLight, diffuseColor.a );	// TODO, this should be pre-multiplied to allow for bright highlights on very transparent objects
 
-				${THREE.ShaderChunk['fog_fragment']}
+				${ShaderChunk['fog_fragment']}
 
 			}
 
@@ -270,7 +272,7 @@ function ShaderTerrain() {
 
 			varying vec3 vViewPosition;
 
-			${THREE.ShaderChunk[ 'shadowmap_pars_vertex' ]}
+			${ShaderChunk[ 'shadowmap_pars_vertex' ]}
 
 			void main() {
 
@@ -314,7 +316,7 @@ function ShaderTerrain() {
 				vec3 normalTex = texture2D( tNormal, uvBase ).xyz * 2.0 - 1.0;
 				vNormal = normalMatrix * normalTex;
 
-				${THREE.ShaderChunk['shadowmap_vertex']}
+				${ShaderChunk['shadowmap_vertex']}
 
 			}
 
