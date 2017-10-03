@@ -1,6 +1,6 @@
 {
   "name": "three-shader-terrain",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dynamic terrain shader from Three.js library",
   "main": "index.js",
   "scripts": {
